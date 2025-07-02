@@ -12,10 +12,6 @@ Edit the values on line 14
 $Output = @()
 
 $Query = "INSERT KQL QUERY HERE"
- 
-$Body = @{
-    Query = $Query
-} | ConvertTo-Json
 
 $Result = Start-MgSecurityHuntingQuery -Query $Query
 
