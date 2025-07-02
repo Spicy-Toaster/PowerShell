@@ -15,9 +15,6 @@ $Query = "INSERT KQL QUERY HERE"
 
 $Result = Start-MgSecurityHuntingQuery -Query $Query
 
-# Initialize an empty array to store results
-$ResultsArray = @()
-
 # Extract keys in the order they appear in the first result
 $Keys = $Result.Results[0].AdditionalProperties.Keys
 
