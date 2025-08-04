@@ -41,6 +41,8 @@ foreach ($User in $UserUPNs) {
     $FilteredLogs = $Logs | Where-Object {
         $_.ActivityDisplayName -notmatch "Remove" -and
         $_.ActivityDisplayName -notmatch "Requested" -and
+        $_.activityDisplayName -notmatch "Update role setting in PIM" -and
+        $_.activityDisplayName -notmatch "Add eligible member to role in PIM completed" -and
         -not [string]::IsNullOrWhiteSpace($_.ResultReason)
     }
 
